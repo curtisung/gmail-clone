@@ -1,0 +1,16 @@
+.sidebar__compose {
+  font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  color: black;
+  box-shadow: 1px 2px 5px -2px grey;
+  background-color: #c2e7ff !important;
+  margin: 10px 0 0 10px !important;
+  border-radius: 10px !important;
+}
+
+.sidebar__span {
+  color: grey;
+}
+
+.sidebar__createIcon {
+  color: grey;
+}

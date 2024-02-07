@@ -3,7 +3,11 @@ import "./Header.css";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import TuneIcon from "@mui/icons-material/Tune";
+import AppsIcon from "@mui/icons-material/Apps";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import SettingsIcon from "@mui/icons-material/Settings";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 
 function Header() {
   let searchPlaceholderText = "Search mail";
@@ -14,7 +18,7 @@ function Header() {
           <MenuIcon />
         </IconButton>
         <img
-          src="https://i.pinimg.com/originals/ae/47/fa/ae47fa9a8fd263aa364018517020552d.png"
+          src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
           alt="gmail"
         />
       </div>
@@ -23,9 +27,24 @@ function Header() {
           <SearchIcon />
         </IconButton>
         <input placeholder={searchPlaceholderText}></input>
-        <ArrowDropDownIcon className="header__inputCaret" />
+        <IconButton>
+          <TuneIcon className="header_inputTune" />
+        </IconButton>
       </div>
-      <div classname="header__right"></div>
+      <div className="header__right">
+        <IconButton>
+          <NotificationsIcon />
+        </IconButton>
+        <IconButton>
+          <SettingsIcon />
+        </IconButton>
+        <IconButton>
+          <AppsIcon />
+        </IconButton>
+        <IconButton>
+          <AccountCircleIcon />
+        </IconButton>
+      </div>
     </div>
   );
 }
