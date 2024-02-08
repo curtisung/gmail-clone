@@ -3,10 +3,10 @@ import "./SidebarOption.css";
 
 // import Button from "@mui/material/Button";
 
-function SidebarOption({ Icon, title, quantity }) {
+function SidebarOption({ Icon, title, quantity, isSelected }) {
   return (
     <>
-      <div className="sidebarOption">
+      <div className={`sidebarOption ${isSelected && "sidebarOption--active"}`}>
         <span className="sidebarOption__icon">
           <Icon />
         </span>

@@ -15,3 +15,8 @@
 .sidebar__createIcon {
   color: #001d35;
 }
+
+.sidebar__footer {
+  display: flex;
+  justify-content: center;
+}
