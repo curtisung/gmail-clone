@@ -3,14 +3,15 @@
   color: black;
   box-shadow: 1px 2px 5px -2px grey;
   background-color: #c2e7ff !important;
-  margin: 10px 0 0 10px !important;
-  border-radius: 10px !important;
+  margin: 10px 0 10px 10px !important;
+  border-radius: 15px !important;
+  padding: 15px 20px !important;
 }
 
 .sidebar__span {
-  color: grey;
+  color: #001d35;
 }
 
 .sidebar__createIcon {
-  color: grey;
+  color: #001d35;
 }

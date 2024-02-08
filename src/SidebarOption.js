@@ -7,7 +7,9 @@ function SidebarOption({ Icon, title, quantity }) {
   return (
     <>
       <div className="sidebarOption">
-        <Icon />
+        <span className="sidebarOption__icon">
+          <Icon />
+        </span>
         <h3>{title}</h3>
         <p>{quantity}</p>
       </div>
