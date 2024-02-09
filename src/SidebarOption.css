@@ -9,7 +9,7 @@
 }
 
 .sidebarOption:hover,
-.sidebarOption--active { 
+.sidebarOption--active {
   color: #c04b37 !important;
   background: #fcecec;
   h3, p {

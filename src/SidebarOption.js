@@ -1,7 +1,6 @@
 import React from "react";
 import "./SidebarOption.css";
 
-// import Button from "@mui/material/Button";
 
 function SidebarOption({ Icon, title, quantity, isSelected }) {
   return (
