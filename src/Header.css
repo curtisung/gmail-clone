@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   margin: 0 0 0 10px;
+  min-width: 300px;
 }
 
 .header__left > img {
@@ -17,20 +18,27 @@
   margin-left: 5px;
 }
 
-.header__middle {
+.header__right {
+  flex: 1;
   display: flex;
-  flex: 0.6;
+  justify-content: space-between;
+}
+
+.header__searchBar {
+  display: flex;
+  flex: 0.6 1 800px;
   align-items: center;
   background-color: #eaf1fb;
   padding: 5px;
   border-radius: 30px;
+  max-width: 540px;
 }
 
-.header__middle > .MuiSvgIcon-root {
+.header__searchBar > .MuiSvgIcon-root {
   color: grey;
 }
 
-.header__middle > input {
+.header__searchBar > input {
   border: none;
   border-radius: 2px;
   width: 100%;
@@ -41,11 +49,11 @@
   font-size: medium;
 }
 
-.header__middle > .header_inputTune {
+.header__searchBar > .header_inputTune {
   margin: 0 10px 0 0;
 }
 
-.header__right {
+.header__settings {
   padding: 0 10px 0 0;
   display: flex;
 }

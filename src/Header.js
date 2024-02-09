@@ -22,29 +22,32 @@ function Header() {
           alt="gmail"
         />
       </div>
-      <div className="header__middle">
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
-        <input placeholder={searchPlaceholderText}></input>
-        <IconButton>
-          <TuneIcon className="header_inputTune" />
-        </IconButton>
-      </div>
       <div className="header__right">
-        <IconButton>
-          <NotificationsIcon />
-        </IconButton>
-        <IconButton>
-          <SettingsIcon />
-        </IconButton>
-        <IconButton>
-          <AppsIcon />
-        </IconButton>
-        <IconButton>
-          <AccountCircleIcon />
-        </IconButton>
+        <div className="header__searchBar">
+          <IconButton>
+            <SearchIcon />
+          </IconButton>
+          <input placeholder={searchPlaceholderText}></input>
+          <IconButton>
+            <TuneIcon className="header_inputTune" />
+          </IconButton>
+        </div>
+        <div className="header__settings">
+          <IconButton>
+            <NotificationsIcon />
+          </IconButton>
+          <IconButton>
+            <SettingsIcon />
+          </IconButton>
+          <IconButton>
+            <AppsIcon />
+          </IconButton>
+          <IconButton>
+            <AccountCircleIcon />
+          </IconButton>
+        </div>
       </div>
+      
     </div>
   );
 }

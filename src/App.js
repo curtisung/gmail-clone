@@ -8,21 +8,16 @@ import { BrowserRouter, Routes, Route, Link} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <BrowserRouter>
         <Header />
-        <Sidebar />
-
-        <Routes>
-          <Route path="/" element={<MailList/>}>
-            
-          </Route>
-          
-          <Route path="/mail" element={<Mail/>}>
-
-          </Route>
-
-        </Routes>
+        <div className="app__body">
+          <Sidebar />
+          <Routes>
+            <Route path="/" element={<MailList/>}/>            
+            <Route path="/mail" element={<Mail/>}/>
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   );

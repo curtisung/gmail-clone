@@ -1,0 +1,28 @@
+.mailList {
+    flex: 1 1 auto;
+    background-color: white;
+    border-radius: 25px;
+    margin: 0 20px 20px 10px;
+}
+
+.mailList__settings {
+    margin: 10px 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mailList__settingsLeft {
+    display:flex;
+    align-items: center;
+}
+
+.mailList__settingsRight {
+    display:flex;
+    align-items: center;
+}
+
+.mailList__tabs {
+    display: flex;
+    max-width: 600px;
+    min-width: 400px;
+}

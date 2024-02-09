@@ -1,3 +1,7 @@
+.sidebar {
+  min-width: 300px;
+}
+
 .sidebar__compose {
   font-family: "Google Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
   color: black;

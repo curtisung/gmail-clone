@@ -1,0 +1,10 @@
+.mailTab {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.mailTab__icon {
+    padding: 0 10px;
+}
