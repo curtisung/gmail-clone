@@ -10,12 +10,12 @@
   box-shadow: 0px 4px 4px -2px rgb(0, 0, 0, 0.25);
 }
 
-.mailRow_options {
+.mailRow__options {
   width: 150px;
   max-width: 150px;
 }
 
-.mailRow_title > h4 {
+.mailRow__title > h4 {
   text-align: left;
   width: 200px;
   max-width: 200px;
@@ -27,7 +27,7 @@
   text-overflow: ellipsis;
 }
 
-.mailRow_message {
+.mailRow__message {
   padding: 0 0 0 10px;
   display: flex;
   flex: 0.8; /*makes it so it takes up 80% of space of the parent flex container, if all the other flex items have flex: auto.*/
@@ -35,7 +35,7 @@
   /* font-size: 13px; */
 }
 
-.mailRow_message > h4 {
+.mailRow__message > h4 {
   width: 400px;
 
   white-space: nowrap; /*defiens how whitespace is handled. Vague, 
@@ -45,7 +45,7 @@
   text-overflow: ellipsis;
 }
 
-.mailRow_description {
+.mailRow__description {
   padding: 0 0 0 10px;
   font-weight: 400;
   color: grey;
