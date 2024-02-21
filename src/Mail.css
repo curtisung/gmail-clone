@@ -1,0 +1,24 @@
+.mail {
+  padding-top: 10px;
+}
+
+.mail__toolsLeft {
+  display: flex;
+}
+
+mail > .mail__toolsLeft > .mail__toolsLeft1 > .mail__toolsLeftMargin {
+  background-color: red;
+  /* margin-right: 6px;
+  margin-left: 6px; */
+}
+
+.mail__toolsLeft1,
+.mail__toolsLeft2,
+.mail__toolsLeft3 {
+  padding-right: 10px;
+  border-right: rgb(226, 226, 226) solid 2px;
+  border-radius: 100;
+  height: 25px;
+  display: flex;
+  align-items: center;
+}

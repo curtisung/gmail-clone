@@ -15,6 +15,12 @@
   max-width: 150px;
 }
 
+.mailRow__mailContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
 .mailRow__title > h4 {
   text-align: left;
   width: 200px;
