@@ -31,7 +31,8 @@
   background-color: #eaf1fb;
   padding: 5px;
   border-radius: 30px;
-  max-width: 540px;
+  max-width: 650px;
+  min-width: 300px;
 }
 
 .header__searchBar > .MuiSvgIcon-root {

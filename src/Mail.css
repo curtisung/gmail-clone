@@ -1,15 +1,22 @@
 .mail {
   padding-top: 10px;
+  background-color: white;
+  flex: 1;
+  border-radius: 25px;
+  margin: 0 20px 20px 10px;
 }
 
-.mail__toolsLeft {
+.mail__tools {
   display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  /* background-color: white; */
 }
 
-mail > .mail__toolsLeft > .mail__toolsLeft1 > .mail__toolsLeftMargin {
-  background-color: red;
-  /* margin-right: 6px;
-  margin-left: 6px; */
+.mail__toolsLeft,
+.mail__toolsRight {
+  display: flex;
+  align-items: center;
 }
 
 .mail__toolsLeft1,

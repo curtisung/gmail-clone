@@ -41,7 +41,9 @@ export default function MailList() {
           <IconButton>
             <ChevronRightIcon />
           </IconButton>
-          <KeyboardIcon />
+          <IconButton>
+            <KeyboardIcon />
+          </IconButton>
           <IconButton>
             <ArrowDropDownIcon />
           </IconButton>

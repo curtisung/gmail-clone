@@ -15,55 +15,81 @@ import AddTaskIcon from "@mui/icons-material/AddTask";
 import DriveFileMoveOutlinedIcon from "@mui/icons-material/DriveFileMoveOutlined";
 import LabelOutlinedIcon from "@mui/icons-material/LabelOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import KeyboardIcon from "@mui/icons-material/Keyboard";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 export default function Mail() {
   const navigate = useNavigate();
 
   return (
     <div className="mail">
-      <div className="mail__toolsLeft">
-        <div className="mail__toolsLeft1">
-          <IconButton
-            onClick={() => navigate("/")}
-            className="mail__toolsLeftMargin"
-          >
-            <ArrowBackIcon />
-          </IconButton>
-          <IconButton className="mail__toolsLeftMargin">
-            <ArchiveIcon />
-          </IconButton>
-          <IconButton className="mail__toolsLeftMargin">
-            <ReportIcon />
-          </IconButton>
-          <IconButton className="mail__toolsLeftMargin">
-            <DeleteIcon />
-          </IconButton>
-        </div>
+      <div className="mail__tools">
+        <div className="mail__toolsLeft">
+          <div className="mail__toolsLeft1">
+            <IconButton
+              onClick={() => navigate("/")}
+              className="mail__toolsLeftMargin"
+            >
+              <ArrowBackIcon />
+            </IconButton>
+            <IconButton className="mail__toolsLeftMargin">
+              <ArchiveIcon />
+            </IconButton>
+            <IconButton className="mail__toolsLeftMargin">
+              <ReportIcon />
+            </IconButton>
+            <IconButton className="mail__toolsLeftMargin">
+              <DeleteIcon />
+            </IconButton>
+          </div>
 
-        <div className="mail__toolsLeft2">
-          <IconButton>
-            <MarkEmailUnreadIcon />
-          </IconButton>
-          <IconButton>
-            <AccessTimeIcon />
-          </IconButton>
-          <IconButton>
-            <AddTaskIcon />
-          </IconButton>
+          <div className="mail__toolsLeft2">
+            <IconButton>
+              <MarkEmailUnreadIcon />
+            </IconButton>
+            <IconButton>
+              <AccessTimeIcon />
+            </IconButton>
+            <IconButton>
+              <AddTaskIcon />
+            </IconButton>
+          </div>
+          <div className="mail__toolsLeft3">
+            <IconButton>
+              <DriveFileMoveOutlinedIcon />
+            </IconButton>
+            <IconButton>
+              <LabelOutlinedIcon />
+            </IconButton>
+            <IconButton>
+              <MoreVertOutlinedIcon />
+            </IconButton>
+          </div>
         </div>
-        <div className="mail__toolsLeft3">
+        <div className="mail__toolsRight">
           <IconButton>
-            <DriveFileMoveOutlinedIcon />
+            <ChevronLeftIcon />
           </IconButton>
           <IconButton>
-            <LabelOutlinedIcon />
+            <ChevronRightIcon />
           </IconButton>
           <IconButton>
-            <MoreVertOutlinedIcon />
+            <KeyboardIcon />
+          </IconButton>
+          <IconButton>
+            <ArrowDropDownIcon />
           </IconButton>
         </div>
       </div>
-      <div className="mail__toolsRight"></div>
+      <div className="mail__body">
+        <div className="mail__bodyHeader">
+          <h2>Subject</h2>
+          <p>Title</p>
+          <p>Time</p>
+        </div>
+      </div>
     </div>
   );
 }
