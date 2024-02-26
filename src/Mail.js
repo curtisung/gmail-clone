@@ -86,8 +86,12 @@ export default function Mail() {
       <div className="mail__body">
         <div className="mail__bodyHeader">
           <h2>Subject</h2>
+          <LabelOutlinedIcon />
           <p>Title</p>
-          <p>Time</p>
+          <p className="mail__time">10:11pm</p>
+        </div>
+        <div className="mail__message">
+          <p>This is the message.</p>
         </div>
       </div>
     </div>

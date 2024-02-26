@@ -53,7 +53,7 @@ export default function MailList() {
         <MailTab
           Icon={InboxIcon}
           title="Primary"
-          color="orange"
+          color="#e86c56"
           isSelected={true}
         />
         <MailTab
