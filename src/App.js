@@ -5,7 +5,7 @@ import Sidebar from "./Sidebar";
 import Mail from "./Mail";
 import MailList from "./MailList";
 import SendMail from "./SendMail";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
