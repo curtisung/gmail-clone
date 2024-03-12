@@ -15,7 +15,8 @@ import { IconButton } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import DuoIcon from "@mui/icons-material/Duo";
 import PhoneIcon from "@mui/icons-material/Phone";
-
+import {useDispatch} from "react-redux";
+import { openSendMessage } from "./features/mailSlice";
 
 function Sidebar() {
   let inboxTitle = "Inbox";
@@ -30,12 +31,15 @@ function Sidebar() {
   let snoozedQuantity = 8;
   let draftsQuantity = 3;
   
+  const dispatch = useDispatch();
+
   return (
     <>
       <div className="sidebar">
         <Button
           startIcon={<CreateIcon className="sidebar__createIcon" />}
           className="sidebar__compose"
+          onClick={ () => dispatch(openSendMessage())}
         >
           <span className="sidebar__span">Compose</span>
         </Button>
