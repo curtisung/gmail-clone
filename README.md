@@ -1,4 +1,6 @@
-# Getting Started with Create React App and Redux
+# Gmail Clone React Application
+
+This project demonstrates some foundational full-stack engineering techniques such as basic UI building, client-side routing, using Redux to manipulate and grab state variables, and creating, updating, and retrieving data in a Firebase database.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
