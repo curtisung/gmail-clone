@@ -4,21 +4,22 @@ import { login } from "./features/userSlice";
 import { auth, provider } from "./firebase";
 import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
+import { signInWithPopup } from "firebase/auth";
 
 
 function Login() {
-    const dispatch = useDispatch
+    const dispatch = useDispatch();
     const signIn = () => {
-        // auth.signInWithPopup(provider)
-        // .then(({user}) => {
-        //     dispatch(login({
-        //         displayName: user.displayName,
-        //         email: user.email,
-        //         photoUrl: user.photoURL
+        signInWithPopup(auth, provider)
+        .then(({user}) => {
+            dispatch(login({
+                displayName: user.displayName,
+                email: user.email,
+                photoUrl: user.photoURL
 
-        //     }))
-        // })
-        // .catch(err => alert(err.message));
+            }))
+        })
+        .catch(err => alert(err.message));
     };
 
     return (

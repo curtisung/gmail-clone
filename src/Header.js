@@ -7,9 +7,22 @@ import TuneIcon from "@mui/icons-material/Tune";
 import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SettingsIcon from "@mui/icons-material/Settings";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import {Avatar} from "@mui/material";
+import { useSelector, useDispatch} from "react-redux";
+import { logout, selectUser } from "./features/userSlice";
+import { auth } from "./firebase";
 
 function Header() {
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch();
+
+  const signOut = () => {
+    auth.signOut()
+      .then(() => {
+        dispatch(logout());
+      });
+  };
+
   let searchPlaceholderText = "Search mail";
   return (
     <div className="header">
@@ -43,7 +56,7 @@ function Header() {
             <AppsIcon />
           </IconButton>
           <IconButton>
-            <AccountCircleIcon />
+            <Avatar src={user?.photoUrl} onClick={signOut}/>
           </IconButton>
         </div>
       </div>
