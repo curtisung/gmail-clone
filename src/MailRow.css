@@ -4,10 +4,12 @@
   cursor: pointer;
   border-bottom: whitesmoke solid 1px;
   max-height: 200px;
+  z-index: 999;
 }
 
 .mailRow:hover {
   box-shadow: 0px 4px 4px -2px rgb(0, 0, 0, 0.25);
+  border-top: 1px solid whitesmoke;
 }
 
 .mailRow__options {
@@ -19,6 +21,17 @@
   flex: 1;
   display: flex;
   align-items: center;
+}
+
+.mailRow__time {
+  padding-right: 15px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.mailRow__title {
+  font-size: 12px;
+  flex: 0.3;
 }
 
 .mailRow__title > h4 {
@@ -43,12 +56,13 @@
 
 .mailRow__message > h4 {
   width: 400px;
-
   white-space: nowrap; /*defiens how whitespace is handled. Vague, 
   but most important is nowrap, which enables text to simply overflow its line without it expanding its container*/
   overflow: hidden; /*useful to use in conjunction with white-space: nowrap; since nowrap restricts 
   the container from growing, while overflow: hidden makes sure the overflowing text is hidden.*/
   text-overflow: ellipsis;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .mailRow__description {

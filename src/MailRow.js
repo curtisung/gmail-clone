@@ -2,6 +2,8 @@ import React from "react";
 import "./MailRow.css";
 
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { selectMail } from "./features/mailSlice";
 
 import { IconButton } from "@mui/material";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
@@ -11,6 +13,12 @@ import Checkbox from "@mui/material/Checkbox";
 
 export default function MailRow({ id, subject, title, description, time }) {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const openMail = () => {
+    dispatch(selectMail({id, title, subject, description, time,}));
+    navigate("/mail");
+  }
 
   return (
     <div className="mailRow">
@@ -23,7 +31,7 @@ export default function MailRow({ id, subject, title, description, time }) {
           <LabelImportantIcon />
         </IconButton>
       </div>
-      <div onClick={() => navigate("/mail")} className="mailRow__mailContent">
+      <div onClick={openMail} className="mailRow__mailContent">
         <div className="mailRow__title">
           <h4>{title}</h4>
         </div>

@@ -15,8 +15,24 @@ import KeyboardIcon from "@mui/icons-material/Keyboard";
 import InboxIcon from "@mui/icons-material/Inbox";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import PeopleIcon from "@mui/icons-material/People";
+import { useState, useEffect } from "react";
+import { db } from "./firebase";
+import { collection, onSnapshot } from "firebase/firestore";
 
 export default function MailList() {
+  const [emails, setEmails] = useState([]);
+
+  useEffect(() => {
+      onSnapshot(collection(db, "emails"), (snapshot) => {
+        setEmails(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      });
+  }, []);
+
   let descriptionText =
     "Good morning, The Grand Costa Mesa, Over the upcoming weeks, A Plus Landscaping will perform tree trimming throughout the community. Tomorrow, Wednesday, February 14th, they will be trimming trees along Village way, as well as along the community drive in the areas between Buildings B, C, and D (see site map in GREEN).";
   return (
@@ -70,14 +86,24 @@ export default function MailList() {
         />
       </div>
 
-      <div className="mailList_list"></div>
-      <div className="mailList_row">
+      <div className="mailList_list">
+        {emails.map( ({id, data: {to, subject, message, timestamp }}) => (
+          <MailRow
+            id={id}
+            key={id}
+            title={to}
+            subject={subject}
+            description={message}
+            time={timestamp.toDate().toString()}
+          />
+        ))}
         <MailRow
           title="Amazon AWS Services, the best services out there"
           subject="Enroll in AWS Camp, the best camp."
           description={descriptionText}
           time="11:47pm"
         />
+
       </div>
     </div>
   );

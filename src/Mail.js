@@ -19,9 +19,12 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import KeyboardIcon from "@mui/icons-material/Keyboard";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { useSelector } from "react-redux";
+import { selectSelectedMail } from "./features/mailSlice";
 
 export default function Mail() {
   const navigate = useNavigate();
+  const currentSelectedMail = useSelector(selectSelectedMail);
 
   return (
     <div className="mail">
@@ -85,13 +88,13 @@ export default function Mail() {
       </div>
       <div className="mail__body">
         <div className="mail__bodyHeader">
-          <h2>Subject</h2>
+          <h2>{currentSelectedMail?.subject}</h2>
           <LabelOutlinedIcon />
-          <p>Title</p>
-          <p className="mail__time">10:11pm</p>
+          <p>{currentSelectedMail?.title}</p>
+          <p className="mail__time">{currentSelectedMail?.time}</p>
         </div>
         <div className="mail__message">
-          <p>This is the message.</p>
+          <p>{currentSelectedMail?.description}</p>
         </div>
       </div>
     </div>
