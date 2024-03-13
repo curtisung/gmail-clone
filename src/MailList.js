@@ -94,7 +94,7 @@ export default function MailList() {
             title={to}
             subject={subject}
             description={message}
-            time={timestamp.toDate().toString()}
+            time={timestamp?.toDate().toString()}
           />
         ))}
         <MailRow
