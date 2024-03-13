@@ -70,3 +70,7 @@
   font-weight: 400;
   color: grey;
 }
+
+.mailList_list {
+  /* overflow: scroll; */
+}

@@ -103,7 +103,6 @@ export default function MailList() {
           description={descriptionText}
           time="11:47pm"
         />
-
       </div>
     </div>
   );
